@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Keybind Tool</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="hero is-warning">
+        <div class="hero-body">
+            <h1 class="title">CS2 Keybinds</h1>
+            <p class="subtitle">Select the item, select the key, click generate, copy the command, then paste into the
+                console.
+            </p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="columns">
+            <div class="column">
+                <div class="field">
+                    <label for="items" class="label">Select Item</label>
+                    <select name="items" id="items" class="select p-2">
+                        // Pistols
+                        <optgroup label="Pistols">
+                            <option value="cz75a">CZ75-Auto</option>
+                            <option value="deagle">Desert Eagle</option>
+                            <option value="elite">Dual Berettas</option>
+                            <option value="fiveseven">Five-Seven</option>
+                            <option value="glock">Glock-18</option>
+                            <option value="hkp2000">P2000</option>
+                            <option value="p250">P250</option>
+                            <option value="revolver">R8 Revolver</option>
+                            <option value="tec9">Tec-9</option>
+                            <option value="usp_silencer">USP-S</option>
+                        </optgroup>
+                        // AR
+                        <optgroup label="Rifles">
+                            <option value="ak47">AK-47</option>
+                            <option value="aug">Aug</option>
+                            <option value="awp">AWP</option>
+                            <option value="famas">Famas</option>
+                            <option value="g3sg1">G3SG1</option>
+                            <option value="galilar">Galil AR</option>
+                            <option value="m4a1">M4A1</option>
+                            <option value="m4a1-silencer">M4A1-S</option>
+                            <option value="scar20">SCAR-20</option>
+                            <option value="sg556">SG 553</option>
+                            <option value="ssg08">SSG 08</option>
+                        </optgroup>
+                        // SMG
+                        <optgroup label="SMGs">
+                            <option value="mac10">Mac-10</option>
+                            <option value="mp5">MP5-SD</option>
+                            <option value="mp7">MP7</option>
+                            <option value="mp9">MP9</option>
+                            <option value="bizon">PP-Bizon</option>
+                            <option value="p90">P90</option>
+                            <option value="ump45">UMP-45</option>
+                        </optgroup>
+                        // Shotguns
+                        <optgroup label="Shotguns">
+                            <option value="mag7">Mag-7</option>
+                            <option value="nova">Nova</option>
+                            <option value="sawedoff">Sawed-Off</option>
+                            <option value="xm1014">XM1014</option>
+                        </optgroup>
+                        // LMG
+                        <optgroup label="LMGs">
+                            <option value="m249">M249</option>
+                            <option value="negev">Negev</option>
+                        </optgroup>
+                        // Equipment
+                        <optgroup label="Equipment">
+                            <option value="vest">Kevlar Vest</option>
+                            <option value="vesthelm">Vest + Helmet</option>
+                            <option value="taser 34">Zeus x27</option>
+                            <option value="defuser">Defuse Kit</option>
+                        </optgroup>
+                        // Grenades
+                        <optgroup label="Grenades">
+                            <option value="flashbang">Flashbang</option>
+                            <option value="hegrenade">HE</option>
+                            <option value="smokegrenade">Smoke</option>
+                            <option value="incgrenade">Incendiary</option>
+                            <option value="molotov">Molotov</option>
+                            <option value="decoy">Decoy</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="keys" class="label pt-2">Select Numpad Key</label>
+                    <select name="keys" id="keys" class="select p-2">
+                        <option value="KP_DEL">.</option>
+                        <option value="KP_DIVIDE">/</option>
+                        <option value="KP_MULTIPLY">*</option>
+                        <option value="KP_MINUS">-</option>
+                        <option value="KP_PLUS">+</option>
+                        <option value="KP_ENTER">Enter</option>
+                        <option value="KP_1">1</option>
+                        <option value="KP_2">2</option>
+                        <option value="KP_3">3</option>
+                        <option value="KP_4">4</option>
+                        <option value="KP_5">5</option>
+                        <option value="KP_6">6</option>
+                        <option value="KP_7">7</option>
+                        <option value="KP_8">8</option>
+                        <option value="KP_9">9</option>
+                        <option value="KP_0">0</option>
+                    </select>
+                </div>
+                <button id="generateBtn" class="button is-primary mt-2">Generate</button>
+                <button id="copyBtn" class="button is-info mt-2">Copy</button>
+            </div>
+            <div class="column">
+                <p class="is-size-5 py-2">Keybind</p>
+                <span id="keybind" class="has-text-warning"></span>
+            </div>
+        </div>
+    </div>
+    <footer class="footer is-flex is-justify-content-center">
+        <p>Created by Tom Slanda&ThickSpace;|</p>
+        <a href="https://www.github.com/slandath">&ThickSpace;Github</a>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
