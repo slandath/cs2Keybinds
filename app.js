@@ -5,6 +5,8 @@ const generateBtn = document.querySelector('#generateBtn')
 const copyBtn = document.querySelector('#copyBtn')
 const message = document.querySelector('#message')
 
+document.addEventListener("DOMContentLoaded", getCurrentYear);
+
 generateBtn.addEventListener('click', () => {
     setMessage()
     const item = itemSelect.value
@@ -27,4 +29,12 @@ copyBtn.addEventListener('click',() => {
 function setMessage(content = null, color = null) {
     message.innerText = content;
     message.className = color
+}
+
+function getCurrentYear() {
+    const currentYear = new Date().getFullYear();
+    const yearId = document.getElementById("year");
+    if (yearId) {
+        yearId.textContent = currentYear;
+    }
 }
