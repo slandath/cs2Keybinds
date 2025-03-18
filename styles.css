@@ -14,6 +14,7 @@
 
 html {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 body {
@@ -21,14 +22,6 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   margin: 0;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background: var(--blue);
-  padding: 1rem;
 }
 
 .background-container {
@@ -74,9 +67,42 @@ footer {
   border: 1px solid black;
 }
 
+.keybind {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
 .flex-container,
 .button-container {
   background: var(--gray);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--blue);
+  padding: 1rem;
+}
+
+.footer a {
+  margin: auto 0;
+}
+
+.has-text-danger {
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: bold;
+}
+
+.has-text-info {
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  background-color: #00ff00;
+  color: #000;
+  font-weight: bold;
 }
 
 .hero {
